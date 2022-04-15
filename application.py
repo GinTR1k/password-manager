@@ -43,7 +43,7 @@ class Application:
         while True:
             master_password = getpass('Придумайте мастер-пароль:\n>  ')
 
-            if len(master_password) <= 4:
+            if len(master_password) < 4:
                 print('Мастер-пароль должен быть не менее 4 символов\n')
                 sleep(0.001)
                 continue
