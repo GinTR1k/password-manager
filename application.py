@@ -213,7 +213,7 @@ class Application:
             try:
                 password.url = input(
                     f'Адрес сайта, где можно использовать пароль (Enter - оставить без изменений):\n[{password.url}] > '
-                )
+                ) or password.url
             except KeyboardInterrupt:
                 print('Изменение пароля отменено.\n')
                 continue
@@ -221,7 +221,7 @@ class Application:
             try:
                 password.note = input(
                     f'Дополнительная информация по паролю (Enter - оставить без изменений):\n[{password.note}] > ',
-                )
+                ) or password.note
             except KeyboardInterrupt:
                 print('Изменение пароля отменено.\n')
                 continue
